@@ -73,7 +73,7 @@ const PostPage = () => {
   return (
     <>
       <Header />
-      <div className="flex flex-col justify-center items-center bg-purple-200">
+      <div className="flex flex-col justify-center items-center bg-slate-300">
         <PostContent post={post} />
       </div>
       <Footer />

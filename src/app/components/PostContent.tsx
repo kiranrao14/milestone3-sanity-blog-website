@@ -66,7 +66,7 @@ const PostContent = ({ post }: PostProps) => {
 
   return (
     <>
-      <div className="post-content bg-pink-100 py-12">
+      <div className="post-content bg-purple-300 py-12">
         <div className="max-w-4xl mx-auto text-center px-4">
           <h1 className="font-bold text-4xl mb-4 text-purple-900">
             {post.title}

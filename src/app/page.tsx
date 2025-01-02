@@ -1,6 +1,6 @@
 
 import Header from "./components/Header";
-import Banner from "./components/Banner";
+import Banner  from './components/Banner'
 import Footer from "./components/Footer";
 import BannerBottom from "./components/BannerBottom";
 import { client, urlFor } from "../../sanity/lib/client";
@@ -45,17 +45,19 @@ const Home = async () => {
       <Header />
       <Banner />
       <BannerBottom />
-      <div>
-      <h2 className="mt-20 sm:mt-32 md:mt-44 flex justify-center items-center font-bold text-3xl text-slate-500">
-  Latest Blog
-</h2>
+      <div className="bg-slate-300 min-h-screen">
+    
+    
+      <h2 className="pt-16 pb-9 sm:mt-44 md:mt-44 flex justify-center items-center font-bold text-2xl sm:text-3xl text-slate-500 px-4 sm:px-0">
+    Latest Blog
+  </h2>
        
         {posts.length > 0 ? (
-          <div className="posts-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+          <div className="posts-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-16">
             {posts.map((post: Post) => (
               <div
                 key={post.slug.current}
-                className="post-item bg-pink-100 p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300"
+                className="post-item bg-purple-300 p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300"
               >
                 <Link href={`/post/${post.slug.current}`} className="block">
                   {/* Title */}
@@ -87,8 +89,8 @@ const Home = async () => {
                         className="author-avatar rounded-full"
                       />
                     )}
-                    <div className="ml-3">
-                      <p>
+                    <div className="ml-3 text-pretty">
+                      <p className="font-bold text-purple-600">
                         <strong>Author: </strong>
                         {post.authorName}
                       </p>
